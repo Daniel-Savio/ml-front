@@ -1,5 +1,5 @@
 
-import logo from '../assets/logo.png';
+import logo from '../../public/logo.png';
 import { Button } from './ui/button';
 import { NavLink } from './nav-link';
 
