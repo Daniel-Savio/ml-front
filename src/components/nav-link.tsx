@@ -18,7 +18,7 @@ export function NavLink({ value, link, forceHover }: NavLinkProps) {
   return (
 
     <div>
-      <motion.div className=" block space-y-2" onHoverStart={() => setHoverd(true)} onHoverEnd={() => setHoverd(false)}>
+      <motion.div className=" block space-y-2" onHoverStart={() => setHoverd(true)} onHoverEnd={() => setHoverd(false)} onTouchStart={() => setHoverd(true)} onTouchEnd={() => setHoverd(false)}>
         <Link to={link} className="text-foreground font-sans">{value}</Link>
         <div className={`border-t-4  border-primary transition-all ${hoverd ? 'w-full' : 'w-0'} `}></div>
       </motion.div>

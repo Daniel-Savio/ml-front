@@ -13,7 +13,6 @@ export default function Home() {
                         initial={{ strokeDasharray: 1000, strokeDashoffset: 1000 }}
                         animate={{ strokeDashoffset: 0, fill: "red" }}
                         transition={{ duration: 6, ease: "easeOut", repeat: Infinity, delay: .5, repeatType: "reverse" }}
-
                         x="50%" y="50%" text-anchor="middle"
                         className="font-title shadow-2xl text-foreground text-5xl fill-transparent stroke-primary stroke-2">
                         GANHAR DINHEIRO
