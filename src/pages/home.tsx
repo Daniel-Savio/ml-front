@@ -1,3 +1,4 @@
+import { BronzePlanCard, GoldPlanCard } from "@/components/plan-cards";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -48,7 +49,7 @@ export default function Home() {
                 </div>
 
                 {/* YAGO */}
-                <div className="flex flex-col md:flex-row mt-16 items-center gap-8">
+                <div className="flex flex-col md:flex-row justify-center mt-16 items-center gap-8">
                     <div className="bg-background border-2 border-primary py-4 px-4 text-justify md:text-left md:pl-16 md:pr-32 rounded-md mx-2 md:w-1/2 shadow-lg shadow-secondary">
                         <p className="text-foreground text-lg font-bold">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, libero eum! Tenetur voluptate obcaecati doloribus, aut laboriosam dolore, non hic sed porro harum possimus ad quaerat iste velit consequuntur ullam."</p>
                     </div>
@@ -66,7 +67,7 @@ export default function Home() {
                 </div>
 
                 {/* WELL */}
-                <div className="flex flex-col md:flex-row mt-16 items-center gap-8">
+                <div className="flex flex-col md:flex-row mt-16 justify-center items-center gap-8">
 
                     <motion.div
                         onHoverStart={() => { setWellHoverd(true) }}
@@ -102,6 +103,21 @@ export default function Home() {
                     </h1>
                     <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
                 </div>
+                <div className="flex flex-col md:flex-row justify-center w-full items-center gap-16">
+                    <BronzePlanCard
+                        price="15,00"
+                        period="1 mês"
+                        options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros']}>
+
+                    </BronzePlanCard>
+                    <GoldPlanCard
+                        price="15.00"
+                        period="1 mês"
+                        options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
+
+                    </GoldPlanCard>
+                </div>
+
             </section>
             <br /><br /><br />
 
