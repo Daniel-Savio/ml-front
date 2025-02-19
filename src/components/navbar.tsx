@@ -31,7 +31,7 @@ export function Navbar() {
                         <DrawerTrigger>
                             <Logs className='text-foreground md:hidden cursor-pointer drop-shadow-md' size={36} />
                         </DrawerTrigger>
-                        <DrawerContent className='h-2/3 shadow-2xl shadow-primary bg-linear-to-t from-primary/10 border-t-2 border-muted'>
+                        <DrawerContent className='h-1/3 shadow-2xl shadow-primary bg-[url(/Vector.svg)] border-t-2 border-muted'>
                             <DrawerHeader className='flex flex-col gap-4'>
 
                             </DrawerHeader>

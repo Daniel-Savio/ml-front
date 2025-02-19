@@ -59,7 +59,7 @@ export default function Home() {
                         onHoverEnd={() => { setYagoHoverd(false) }}
                         onTouchStart={() => { setYagoHoverd(true) }}
                         onTouchEnd={() => { setYagoHoverd(false) }}
-                        className={`rounded-full bg-background border-2 border-primary size-96 md:-translate-x-15 shadow-lg shadow-secondary bg-[url(/public/yago.jpeg)] bg-cover bg-center transition-all ${yagoHoverd ? "" : "saturate-50"} justify-center flex items-center`}>
+                        className={`rounded-full bg-background border-2 border-primary size-80 md:size-96 md:-translate-x-15 shadow-lg shadow-secondary bg-[url(/public/yago.jpeg)] bg-cover bg-center transition-all ${yagoHoverd ? "" : "saturate-50"} justify-center flex items-center`}>
                         <motion.h1
                             animate={{ scale: yagoHoverd ? 1.1 : 1, translateY: yagoHoverd ? 0 : 100, opacity: yagoHoverd ? 1 : 0 }}
                             className={`font-title text-5xl text-primary `}>Yago</motion.h1>
@@ -74,13 +74,13 @@ export default function Home() {
                         onHoverEnd={() => { setWellHoverd(false) }}
                         onTouchStart={() => { setWellHoverd(true) }}
                         onTouchEnd={() => { setWellHoverd(false) }}
-                        className={`rounded-full bg-background border-2 border-primary size-96 md:translate-x-15 shadow-lg shadow-secondary bg-[url(/public/well.jpeg)] bg-cover bg-center transition-all ${wellHoverd ? "" : "saturate-50"} justify-center flex items-center`}>
+                        className={`rounded-full bg-background border-2 border-primary size-80 md:size-96 md:translate-x-18 shadow-lg shadow-secondary bg-[url(/public/well.jpeg)] bg-cover bg-center transition-all ${wellHoverd ? "" : "saturate-50"} justify-center flex items-center`}>
                         <motion.h1
                             animate={{ scale: wellHoverd ? 1.1 : 1, translateY: wellHoverd ? 0 : 100, opacity: wellHoverd ? 1 : 0 }}
                             className={`font-title text-5xl text-primary `}>Well</motion.h1>
                     </motion.div>
 
-                    <div className="bg-background border-2 border-primary py-4 px-4 text-justify md:text-right md:pl- md:pr-16 rounded-md mx-2 md:w-1/2 shadow-lg shadow-secondary">
+                    <div className="bg-background border-2 border-primary py-4 px-4 text-justify md:text-right md:pl-32 md:pr-16 rounded-md mx-2 md:w-1/2 shadow-lg shadow-secondary">
                         <p className="text-foreground text-lg font-bold">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, libero eum! Tenetur voluptate obcaecati doloribus, aut laboriosam dolore, non hic sed porro harum possimus ad quaerat iste velit consequuntur ullam."</p>
                     </div>
 
