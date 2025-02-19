@@ -17,7 +17,7 @@ export function Navbar() {
     return (
         <nav className="bg-transparent py-4">
             <div className=" px-8 mx-auto flex justify-between items-center">
-                <img src={logo} className="w-28 h-12 md:w-36 md:h-16"></img>
+                <img src={logo} className="w-28 h-12 md:w-36 md:h-16 "></img>
                 <div id='nav-desktop' className="hidden md:flex space-x-4">
                     <NavLink link='#' value='Nos Conheça'></NavLink>
                     <NavLink link='#' value='Planos'></NavLink>
