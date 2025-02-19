@@ -48,7 +48,7 @@ export function BronzePlanCard({ price, period, options }: PlanProps) {
       <Tilt tiltReverse={true} tiltMaxAngleX={5} tiltMaxAngleY={5}>
         <Card className="border-ring bg-[url(/public/Vector.svg)]  bg-no-repeat bg-center shadow-lg shadow-secondary">
           <CardHeader className="flex flex-col text-center justify-center">
-            <CardTitle className="font-title text-4xl text-secondary py-2">Bronze</CardTitle>
+            <CardTitle className="font-title text-4xl text-secondary py-2">Mensal</CardTitle>
 
             <Separator orientation="horizontal" className="bg-muted-foreground w-full h-0.5 rounded" />
 
@@ -93,7 +93,7 @@ export function GoldPlanCard({ price, period, options }: PlanProps) {
 
         <Card className="border-primary bg-[url(/public/Vector.svg)]  bg-no-repeat bg-center shadow-lg shadow-primary">
           <CardHeader className="flex flex-col text-center justify-center">
-            <CardTitle className="font-title text-4xl text-primary py-2">Gold</CardTitle>
+            <CardTitle className="font-title text-4xl text-primary py-2">Trimestral</CardTitle>
 
             <Separator orientation="horizontal" className="bg-muted-foreground w-full h-0.5 rounded" />
 

@@ -2,6 +2,7 @@ import { BronzePlanCard, GoldPlanCard } from "@/components/plan-cards";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Sucessos } from "./sections/home/sucessos";
 
 export default function Home() {
 
@@ -94,31 +95,58 @@ export default function Home() {
             <section>
                 <div className="flex flex-col justify-center text-center">
 
-                    <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                    <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
                     <h2 className="font-title text-foreground md:text-3xl text-2xl text-center leading-relaxed">
                         Nossos planos
                     </h2>
                     <h1 className="font-title text-primary md:text-5xl text-3xl text-center leading-relaxed">
                         SEU CRESCIMENTO
                     </h1>
-                    <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                    <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
                 </div>
+
+
                 <div className="flex flex-col md:flex-row justify-center w-full items-center gap-16">
                     <BronzePlanCard
-                        price="15,00"
+                        price="29,99"
                         period="1 mês"
-                        options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros']}>
+                        options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </BronzePlanCard>
                     <GoldPlanCard
-                        price="15.00"
-                        period="1 mês"
+                        price="19.00"
+                        period="3 meses"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </GoldPlanCard>
                 </div>
 
             </section>
+
+            {/* Fourth Section */}
+            <section>
+
+                <div className="flex flex-col justify-center text-center">
+
+                    <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                    <h2 className="font-title text-foreground md:text-3xl text-2xl text-center leading-relaxed">
+                        Conheça um pouquinho mais das
+                    </h2>
+                    <h1 className="font-title text-primary md:text-5xl text-3xl text-center leading-relaxed">
+                        VANTAGENS E SUCESSOS
+                    </h1>
+                    <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                </div>
+
+                <Sucessos></Sucessos>
+
+
+
+
+            </section>
+
+
+
             <br /><br /><br />
 
         </div >
