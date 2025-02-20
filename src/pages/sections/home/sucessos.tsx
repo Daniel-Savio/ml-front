@@ -10,7 +10,7 @@ import {
 
 export function Sucessos() {
     return (
-        <div className="flex flex-col justify-center items-center gap-8">
+        <div className="flex flex-col justify-center items-center gap-8 mt-16">
             <Carousel
                 opts={{
                     align: "start",
@@ -19,7 +19,7 @@ export function Sucessos() {
             >
                 <CarouselContent>
                     {Array.from({ length: 5 }).map((_, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                        <CarouselItem key={index} className="basis-1/2 md:basis-1/1">
                             <div className="p-1">
                                 <Card>
                                     <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -30,8 +30,8 @@ export function Sucessos() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
             </Carousel>
         </div>
     )

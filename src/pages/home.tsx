@@ -125,7 +125,6 @@ export default function Home() {
 
             {/* Fourth Section */}
             <section>
-
                 <div className="flex flex-col justify-center text-center">
 
                     <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
@@ -137,12 +136,7 @@ export default function Home() {
                     </h1>
                     <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
                 </div>
-
                 <Sucessos></Sucessos>
-
-
-
-
             </section>
 
 

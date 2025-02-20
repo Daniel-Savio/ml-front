@@ -112,7 +112,7 @@ export function GoldPlanCard({ price, period, options }: PlanProps) {
               {
                 options && (options.map((option, index) => (
                   <motion.li variants={itemAnimation} key={index} className="flex items-left text-left gap-2">
-                    <CircleCheckBig className="text-secondary" />
+                    <CircleCheckBig className="text-primary" />
                     <p className="text-foreground">{option}</p>
                   </motion.li>
                 ))
