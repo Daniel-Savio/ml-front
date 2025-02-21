@@ -12,6 +12,16 @@ import { CircleCheckBig } from "lucide-react"
 import { Button } from "./ui/button"
 import Tilt from "react-parallax-tilt"
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { PaymentForm } from "./payment-form"
+
 interface PlanProps {
   price: string
   period: string
@@ -77,8 +87,23 @@ export function BronzePlanCard({ price, period, options }: PlanProps) {
 
 
           </CardContent>
-          <CardFooter>
-            <Button variant={"secondary"} className="w-full">Comece a ganhar</Button>
+          <CardFooter className="flex justify-center">
+            <Dialog>
+              <DialogTrigger className="w-full"><Button variant={"secondary"} className="w-full">Comece a ganhar</Button></DialogTrigger>
+
+              <DialogContent className="bg-[url(/public/Vector.svg)]  bg-center shadow-md shadow-secondary">
+                <DialogHeader className="font-title text-2xl text-primary">
+                  <DialogTitle>Suas informações</DialogTitle>
+                  <DialogDescription className="font-sans text-foreground text-justify">
+                    Por favor, verifique que seus dados estão corretos para que seja possível lhe dar as devidas permissões após a compra.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex justify-center w-full">
+                  <PaymentForm link="#"></PaymentForm>
+                </div>
+              </DialogContent>
+            </Dialog>
+
           </CardFooter>
         </Card>
       </Tilt>
@@ -122,8 +147,22 @@ export function GoldPlanCard({ price, period, options }: PlanProps) {
 
 
           </CardContent>
-          <CardFooter>
-            <Button className="w-full">Comece a ganhar</Button>
+          <CardFooter className="flex justify-center">
+            <Dialog>
+              <DialogTrigger className="w-full"><Button variant={"secondary"} className="w-full">Comece a ganhar</Button></DialogTrigger>
+
+              <DialogContent className="bg-[url(/public/Vector.svg)]  bg-center shadow-md shadow-secondary">
+                <DialogHeader className="font-title text-2xl text-primary">
+                  <DialogTitle>Suas informações</DialogTitle>
+                  <DialogDescription className="font-sans text-foreground text-justify">
+                    Por favor, verifique que seus dados estão corretos para que seja possível lhe dar as devidas permissões após a compra.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex justify-center w-full">
+                  <PaymentForm link="#"></PaymentForm>
+                </div>
+              </DialogContent>
+            </Dialog>
           </CardFooter>
         </Card>
       </Tilt>

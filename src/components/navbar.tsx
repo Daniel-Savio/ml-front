@@ -41,7 +41,7 @@ export function Navbar() {
                                 <NavLink link='#' value='Depoimentos'></NavLink>
                                 <NavLink link='#' value='Perguntas'></NavLink>
                             </div>
-                            <DrawerFooter>
+                            <DrawerFooter className='mb-10'>
                                 <Button variant={'outline'} className="md:flex">Fale Conosco</Button>
 
                             </DrawerFooter>
