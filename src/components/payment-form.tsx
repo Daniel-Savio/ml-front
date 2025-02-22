@@ -23,7 +23,7 @@ export function PaymentForm({ link }: { link: string }) {
                 },
             });
             if (response.data) {
-                //@ts-expect-error - window does work
+
                 window.location.href = response.data;
             }
         } catch (error) {

@@ -12,7 +12,7 @@ const CompletePage: React.FC = () => {
     const { sessionId } = useParams()
 
     const handleRedirect = () => {
-        //@ts-expect-error - window does work
+
         window.location.href = 'https://discord.com';
     };
 
