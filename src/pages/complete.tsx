@@ -20,7 +20,7 @@ const CompletePage: React.FC = () => {
     useEffect(() => {
         console.log(sessionId);
         axios.post(`${variables.api}/add-costumer`, { sessionId: sessionId })
-            .then((response) => { toast.success("Suas informações foram salvas na nossa base"); })
+            .then((response) => { toast.success(response.data); })
             .catch((error) => { toast.error("Algo deu errado verifique seu pagamento e contate nossos administradores" + error); });
     }, [sessionId]);
 
