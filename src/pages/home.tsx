@@ -13,7 +13,7 @@ export default function Home() {
         <div className="flex flex-col justify-center container mx-auto pt-8 gap-16 md:gap-40">
 
             {/* First Section */}
-            <section className="mt-8">
+            <section className="mt-24">
                 <div className=" flex flex-col text-center justify-center items-center gap-3">
                     <h1 className="font-title text-foreground md:text-3xl text-2xl text-center">
                         Repense seu modo de
@@ -38,7 +38,7 @@ export default function Home() {
             </section>
 
             {/* Second Section */}
-            <section>
+            <section id="second-section" className="mt-16">
 
                 <div className="flex flex-col justify-center text-center">
                     <h2 className="font-title text-foreground md:text-3xl text-2xl text-center leading-relaxed">
@@ -92,7 +92,7 @@ export default function Home() {
             </section >
 
             {/* Third Section */}
-            <section>
+            <section id="third-section">
                 <div className="flex flex-col justify-center text-center">
 
                     <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
@@ -114,7 +114,7 @@ export default function Home() {
 
                     </BronzePlanCard>
                     <GoldPlanCard
-                        price="19.00"
+                        price="19.00/mês"
                         period="3 meses"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
@@ -124,7 +124,7 @@ export default function Home() {
             </section>
 
             {/* Fourth Section */}
-            <section>
+            <section id="fourth-section">
                 <div className="flex flex-col justify-center text-center">
 
                     <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>

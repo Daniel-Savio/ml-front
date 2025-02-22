@@ -99,7 +99,7 @@ export function BronzePlanCard({ price, period, options }: PlanProps) {
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex justify-center w-full">
-                  <PaymentForm link="#"></PaymentForm>
+                  <PaymentForm link="http://localhost:3333/bronze-plan "></PaymentForm>
                 </div>
               </DialogContent>
             </Dialog>
@@ -159,7 +159,7 @@ export function GoldPlanCard({ price, period, options }: PlanProps) {
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex justify-center w-full">
-                  <PaymentForm link="#"></PaymentForm>
+                  <PaymentForm link="http://localhost:3333/gold-plan   "></PaymentForm>
                 </div>
               </DialogContent>
             </Dialog>

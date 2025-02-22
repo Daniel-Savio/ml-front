@@ -3,6 +3,7 @@ import logo from '/logo.png';
 import { Button } from './ui/button';
 import { NavLink } from './nav-link';
 import { Logs } from 'lucide-react';
+
 import {
     Drawer,
     DrawerContent,
@@ -15,14 +16,16 @@ import {
 
 export function Navbar() {
     return (
-        <nav className="bg-transparent py-4">
-            <div className=" px-8 mx-auto flex justify-between items-center">
-                <img src={logo} className="w-28 h-12 md:w-36 md:h-16 "></img>
+        <nav className="bg-background bg-[url('/public/Vector.svg')] fixed z-40 w-screen py-2 shadow-lg shadow-ring">
+            <div className=" px-8 mx-auto flex justify-between items-center ">
+                <a href="http://localhost:5173/">
+                    <img src={logo} className="w-28 h-12 md:w-36 md:h-16 "></img>
+                </a>
                 <div id='nav-desktop' className="hidden md:flex space-x-4">
-                    <NavLink link='#' value='Nos Conheça'></NavLink>
-                    <NavLink link='#' value='Planos'></NavLink>
-                    <NavLink link='#' value='Depoimentos'></NavLink>
-                    <NavLink link='#' value='Perguntas'></NavLink>
+                    <NavLink link='http://localhost:5173/#second-section' value='Nos Conheça'></NavLink>
+                    <NavLink link='http://localhost:5173/#third-section' value='Planos'></NavLink>
+                    <NavLink link='http://localhost:5173/#fourth-section' value='Sucessos'></NavLink>
+                    <NavLink link='http://localhost:5173/#third-section' value='Perguntas'></NavLink>
                 </div>
                 <Button variant={'outline'} className="md:flex hidden">Fale Conosco</Button>
 
@@ -50,7 +53,10 @@ export function Navbar() {
                 </div>
 
 
+
+                {/* <div className='w-screen h-full absolute bg-zinc-600 opacity-60 px-4 -z-10 -left-0.5 blur-xl'></div> */}
             </div>
+
         </nav>
     );
 };

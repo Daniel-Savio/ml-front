@@ -1,23 +1,35 @@
-
 import { useForm } from 'react-hook-form';
 import { Button } from './ui/button';
 import { CircleHelp } from "lucide-react";
 import { easeIn, motion } from 'motion/react';
 import { useState } from 'react';
+import axios from 'axios';
+
 
 interface FormData {
-    name: string;
+    nick: string;
 }
 
 export function PaymentForm({ link }: { link: string }) {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
     const [toolTip, setToolTip] = useState(false);
 
-    const onSubmit = (data: FormData) => {
-        console.log(data);
-        console.log(link)
-    };
 
+    const onSubmit = async (data: FormData) => {
+        try {
+            const response = await axios.post(link, data, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            if (response.data) {
+                //@ts-expect-error - window does work
+                window.location.href = response.data;
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    };
 
     const tooltipAnimation = {
         visible: { opacity: 1, transition: { easeIn }, },
@@ -42,13 +54,13 @@ export function PaymentForm({ link }: { link: string }) {
                     </div>
                     <input
                         className='bg-zinc-900 text-sm border-2 border-ring text-foreground outline-none rounded-md p-1 mt-2'
-                        id="name"
-                        {...register('name', { required: true, minLength: 3 })}
+                        id="nick"
+                        {...register('nick', { required: true, minLength: 3 })}
                     />
-                    {errors.name && <span className='text-red-400 text-sm mt-1'>Insira um nick válido </span>}
+                    {errors.nick && <span className='text-red-400 text-sm mt-1'>Insira um nick válido </span>}
                 </div>
 
-                <Button className='font-bold' type="submit">Ir para o pagamento</Button>
+                <Button className='font-bold' type="submit">Ir para o pagamento </Button>
             </div>
         </form>
     );
