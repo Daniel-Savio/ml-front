@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prosto+One&display=swap");
+
+@custom-variant dark (&:is(.dark *));
 @import "tailwindcss";
 :root {
   --background: hsl(20 14.3% 4.1%);
@@ -58,4 +60,13 @@
   --font-sans: "Inter", " Roboto", "Helvetica Neue", "Arial", sans-serif;
   --font-title: "Prosto One", "Inter", " Roboto", "Helvetica Neue", "Arial",
     sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

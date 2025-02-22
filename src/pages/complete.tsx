@@ -6,6 +6,7 @@ import { ChevronRight } from 'lucide-react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { variables } from '@/lib/consts';
+import { toast } from 'sonner';
 
 const CompletePage: React.FC = () => {
 
@@ -13,14 +14,14 @@ const CompletePage: React.FC = () => {
 
     const handleRedirect = () => {
 
-        window.location.href = 'https://discord.com';
+        window.location.href = variables.discord;
     };
 
     useEffect(() => {
         console.log(sessionId);
         axios.post(`${variables.api}/add-costumer`, { sessionId: sessionId })
-            .then((response) => { console.log(response); })
-            .catch((error) => { console.log(error); });
+            .then((response) => { toast.success("Suas informações foram salvas na nossa base"); })
+            .catch((error) => { toast.error("Algo deu errado verifique seu pagamento e contate nossos administradores" + error); });
     }, [sessionId]);
 
     return (

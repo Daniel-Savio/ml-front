@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Button } from './ui/button';
-import { CircleHelp } from "lucide-react";
+import { CircleHelp, LoaderCircle } from "lucide-react";
 import { easeIn, motion } from 'motion/react';
 import { useState } from 'react';
 import axios from 'axios';
@@ -13,9 +13,12 @@ interface FormData {
 export function PaymentForm({ link }: { link: string }) {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
     const [toolTip, setToolTip] = useState(false);
+    const [loading, setLoading] = useState(false)
+
 
 
     const onSubmit = async (data: FormData) => {
+        setLoading(true)
         try {
             const response = await axios.post(link, data, {
                 headers: {
@@ -23,7 +26,7 @@ export function PaymentForm({ link }: { link: string }) {
                 },
             });
             if (response.data) {
-
+                setLoading(false)
                 window.location.href = response.data;
             }
         } catch (error) {
@@ -60,7 +63,7 @@ export function PaymentForm({ link }: { link: string }) {
                     {errors.nick && <span className='text-red-400 text-sm mt-1'>Insira um nick válido </span>}
                 </div>
 
-                <Button className='font-bold' type="submit">Ir para o pagamento </Button>
+                <Button className='font-bold' type="submit">Ir para o pagamento Loader <LoaderCircle className={`animate-spin ${loading ? "" : "hidden"}`} size={8} /></Button>
             </div>
         </form>
     );
