@@ -8,7 +8,6 @@ import {
     Drawer,
     DrawerContent,
 
-    DrawerFooter,
     DrawerHeader,
 
     DrawerTrigger,
@@ -28,7 +27,11 @@ export function Navbar() {
                     <NavLink link={`${variables.default}/#fourth-section`} value='Sucessos'></NavLink>
                     <NavLink link={`${variables.default}/#third-section`} value='Perguntas'></NavLink>
                 </div>
-                <Button variant={'outline'} className="md:flex hidden">Fale Conosco</Button>
+
+                <Button variant={'outline'} onClick={() => {
+                    //@ts-expect-errore: Unreachable code error
+                    window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
+                }} className="md:flex hidden">Fale Conosco</Button>
 
                 <div className='md:hidden'>
                     <Drawer >
@@ -44,11 +47,12 @@ export function Navbar() {
                                 <NavLink link='#' value='Planos'></NavLink>
                                 <NavLink link='#' value='Depoimentos'></NavLink>
                                 <NavLink link='#' value='Perguntas'></NavLink>
+                                <Button variant={'outline'} onClick={() => {
+                                    //@ts-expect-errore: Unreachable code error
+                                    window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
+                                }} className="md:flex">Fale Conosco</Button>
                             </div>
-                            <DrawerFooter className='mb-10'>
-                                <Button variant={'outline'} className="md:flex">Fale Conosco</Button>
 
-                            </DrawerFooter>
                         </DrawerContent>
                     </Drawer>
                 </div>

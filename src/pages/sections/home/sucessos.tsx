@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+
 import {
     Carousel,
     CarouselContent,
@@ -23,7 +24,7 @@ export function Sucessos() {
                             <div className="p-1">
                                 <Card>
                                     <CardContent className="flex aspect-square items-center justify-center p-6">
-                                        <span className="text-3xl font-semibold">{index + 1}</span>
+                                        <span className="text-3xl font-semibold"><img src={`/sucesso-${index + 1}.jpeg`} alt="" /></span>
                                     </CardContent>
                                 </Card>
                             </div>

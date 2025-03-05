@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Sucessos } from "./sections/home/sucessos";
+import { FAQS } from "./sections/home/faqs";
 
 export default function Home() {
 
@@ -16,7 +17,7 @@ export default function Home() {
             <section className="mt-24">
                 <div className=" flex flex-col text-center justify-center items-center gap-3">
                     <h1 className="font-title text-foreground md:text-3xl text-2xl text-center">
-                        Repense seu modo de
+                        Aprenda a lucrar de verdade no
                     </h1>
                     <motion.svg className="w-full">
                         <motion.text
@@ -25,14 +26,14 @@ export default function Home() {
                             transition={{ duration: 4, ease: "easeOut", repeat: Infinity, repeatType: "reverse" }}
                             x="50%" y="50%" text-anchor="middle"
                             className="font-title shadow-2xl text-foreground md:text-7xl text-3xl text-wrap fill-transparent stroke-primary stroke-2">
-                            GANHAR DINHEIRO
+                            MERCADO LIVRE!
                         </motion.text>
                     </motion.svg>
                 </div>
 
                 <div className="m-auto text-center space-y-2">
                     <Button className="text-lg font-bold">Comece com a gente</Button>
-                    <h2 className="text-foreground text-center">Faça parte do nosso time</h2>
+                    <h2 className="text-foreground text-center">Entre para nossa comunidade e aproveite as melhores promoções e oportunidades de ganho!</h2>
                 </div>
 
             </section>
@@ -137,6 +138,25 @@ export default function Home() {
                     <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
                 </div>
                 <Sucessos></Sucessos>
+            </section>
+
+            {/* Fifth Section */}
+            <section id="fifth-section" className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center text-center">
+
+                    <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                    <h2 className="font-title text-foreground md:text-3xl text-2xl text-center leading-relaxed">
+                        Tire suas dúvidas
+                    </h2>
+                    <h1 className="font-title text-primary md:text-5xl text-3xl text-center leading-relaxed">
+                        PERGUNTAS FREQUENTES
+                    </h1>
+                    <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                </div>
+
+
+                <FAQS></FAQS>
+
             </section>
 
 
