@@ -116,8 +116,8 @@ export default function Home() {
 
                     </BronzePlanCard>
                     <GoldPlanCard
-                        price="19.00/mês"
-                        period="3 meses"
+                        price="59.99"
+                        period="3 meses de acesso vitalício"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </GoldPlanCard>
