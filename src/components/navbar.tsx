@@ -29,7 +29,7 @@ export function Navbar() {
                 </div>
 
                 <Button variant={'outline'} onClick={() => {
-                    //@ts-expect-errore: Unreachable code error
+                    ///public/welle: Unreachable code error
                     window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
                 }} className="md:flex hidden">Fale Conosco</Button>
 
@@ -48,7 +48,7 @@ export function Navbar() {
                                 <NavLink link='#' value='Depoimentos'></NavLink>
                                 <NavLink link='#' value='Perguntas'></NavLink>
                                 <Button variant={'outline'} onClick={() => {
-                                    //@ts-expect-errore: Unreachable code error
+                                    ///public/welle: Unreachable code error
                                     window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
                                 }} className="md:flex">Fale Conosco</Button>
                             </div>

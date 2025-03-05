@@ -27,7 +27,7 @@ export function PaymentForm({ link }: { link: string }) {
             });
             if (response.data) {
                 //setLoading(false)
-                //@ts-expect-errore: Unreachable code error
+                ///public/welle: Unreachable code error
                 window.location.href = response.data;
             }
         } catch (error) {
