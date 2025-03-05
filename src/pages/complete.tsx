@@ -25,7 +25,7 @@ const CompletePage: React.FC = () => {
     }, [sessionId]);
 
     return (
-        <section className="bg-background bg-[url('/public/hash-patter.svg')] h-screen w-full flex flex-col items-center justify-center">
+        <section className="bg-background bg-[url('//hash-patter.svg')] h-screen w-full flex flex-col items-center justify-center">
             <div className=" flex flex-col text-center justify-center items-center ">
                 <motion.svg className="w-screen">
                     <motion.text

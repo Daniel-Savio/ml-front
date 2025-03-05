@@ -26,7 +26,7 @@ export function PaymentForm({ link }: { link: string }) {
                 },
             });
             if (response.data) {
-                setLoading(false)
+                //setLoading(false)
                 window.location.href = response.data;
             }
         } catch (error) {
@@ -63,7 +63,7 @@ export function PaymentForm({ link }: { link: string }) {
                     {errors.nick && <span className='text-red-400 text-sm mt-1'>Insira um nick válido </span>}
                 </div>
 
-                <Button className='font-bold' type="submit">Ir para o pagamento Loader <LoaderCircle className={`animate-spin ${loading ? "" : "hidden"}`} size={8} /></Button>
+                <Button className='font-bold' type="submit">Ir para o pagamento <LoaderCircle className={`animate-spin ${loading ? "" : "hidden"}`} size={8} /></Button>
             </div>
         </form>
     );

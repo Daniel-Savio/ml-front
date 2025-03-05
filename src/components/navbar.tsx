@@ -13,19 +13,20 @@ import {
 
     DrawerTrigger,
 } from "./ui/drawer"
+import { variables } from '@/lib/consts';
 
 export function Navbar() {
     return (
-        <nav className="bg-background bg-[url('/public/Vector.svg')] fixed z-40 w-screen py-2 shadow-lg shadow-ring">
+        <nav className="bg-background bg-[url('/Vector.svg')] fixed z-40 w-screen py-2 shadow-lg shadow-ring">
             <div className=" px-8 mx-auto flex justify-between items-center ">
-                <a href="http://localhost:5173/">
+                <a href={variables.default}>
                     <img src={logo} className="w-28 h-12 md:w-36 md:h-16 "></img>
                 </a>
                 <div id='nav-desktop' className="hidden md:flex space-x-4">
-                    <NavLink link='http://localhost:5173/#second-section' value='Nos Conheça'></NavLink>
-                    <NavLink link='http://localhost:5173/#third-section' value='Planos'></NavLink>
-                    <NavLink link='http://localhost:5173/#fourth-section' value='Sucessos'></NavLink>
-                    <NavLink link='http://localhost:5173/#third-section' value='Perguntas'></NavLink>
+                    <NavLink link={`${variables.default}/#second-section`} value='Nos Conheça'></NavLink>
+                    <NavLink link={`${variables.default}/#third-section`} value='Planos'></NavLink>
+                    <NavLink link={`${variables.default}/#fourth-section`} value='Sucessos'></NavLink>
+                    <NavLink link={`${variables.default}/#third-section`} value='Perguntas'></NavLink>
                 </div>
                 <Button variant={'outline'} className="md:flex hidden">Fale Conosco</Button>
 

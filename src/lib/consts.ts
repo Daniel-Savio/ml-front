@@ -1,5 +1,5 @@
 export const variables = {
-    api: "http://localhost:3333",
-    discord: "https://discord.com",
-    default: "http://localhost:3000",
+    api: "https://ml-project-pxid.onrender.com",
+    discord: "https://discord.gg/D7B6EEnuHs",
+    default: "http://localhost:5173",
 }

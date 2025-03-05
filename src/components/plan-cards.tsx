@@ -21,6 +21,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { PaymentForm } from "./payment-form"
+import { variables } from "@/lib/consts"
 
 interface PlanProps {
   price: string
@@ -56,7 +57,7 @@ export function BronzePlanCard({ price, period, options }: PlanProps) {
   return (
     <>
       <Tilt tiltReverse={true} tiltMaxAngleX={5} tiltMaxAngleY={5}>
-        <Card className="border-ring bg-[url(/public/Vector.svg)]  bg-no-repeat bg-center shadow-lg shadow-secondary">
+        <Card className="border-ring bg-[url(/Vector.svg)]  bg-no-repeat bg-center shadow-lg shadow-secondary">
           <CardHeader className="flex flex-col text-center justify-center">
             <CardTitle className="font-title text-4xl text-secondary py-2">Mensal</CardTitle>
 
@@ -99,7 +100,7 @@ export function BronzePlanCard({ price, period, options }: PlanProps) {
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex justify-center w-full">
-                  <PaymentForm link="http://localhost:3333/bronze-plan "></PaymentForm>
+                  <PaymentForm link={`${variables.api}/bronze-plan`}></PaymentForm>
                 </div>
               </DialogContent>
             </Dialog>
@@ -159,7 +160,7 @@ export function GoldPlanCard({ price, period, options }: PlanProps) {
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex justify-center w-full">
-                  <PaymentForm link="http://localhost:3333/gold-plan   "></PaymentForm>
+                  <PaymentForm link={`${variables.api}/gold-plan`}></PaymentForm>
                 </div>
               </DialogContent>
             </Dialog>
