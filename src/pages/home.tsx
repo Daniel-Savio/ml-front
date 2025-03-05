@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Sucessos } from "./sections/home/sucessos";
 import { FAQS } from "./sections/home/faqs";
+import { variables } from "@/lib/consts";
 
 export default function Home() {
 
@@ -32,7 +33,7 @@ export default function Home() {
                 </div>
 
                 <div className="m-auto text-center space-y-2">
-                    <Button className="text-lg font-bold">Comece com a gente</Button>
+                    <Button className="text-lg font-bold" onClick={() => { window.location.href = `${variables.default}/#third-section` }}>Comece com a gente</Button>
                     <h2 className="text-foreground text-center">Entre para nossa comunidade e aproveite as melhores promoções e oportunidades de ganho!</h2>
                 </div>
 

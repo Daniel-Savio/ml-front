@@ -25,7 +25,7 @@ export function Navbar() {
                     <NavLink link={`${variables.default}/#second-section`} value='Nos Conheça'></NavLink>
                     <NavLink link={`${variables.default}/#third-section`} value='Planos'></NavLink>
                     <NavLink link={`${variables.default}/#fourth-section`} value='Sucessos'></NavLink>
-                    <NavLink link={`${variables.default}/#third-section`} value='Perguntas'></NavLink>
+                    <NavLink link={`${variables.default}/#fifth-section`} value='Perguntas'></NavLink>
                 </div>
 
                 <Button variant={'outline'} onClick={() => {
