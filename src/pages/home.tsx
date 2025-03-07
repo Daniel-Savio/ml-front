@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Sucessos } from "./sections/home/sucessos";
 import { FAQS } from "./sections/home/faqs";
 import { variables } from "@/lib/consts";
+import { SocialMedia } from "./sections/home/social-media";
+import { CancelButton } from "@/components/cancel-button";
 
 export default function Home() {
 
@@ -37,6 +39,22 @@ export default function Home() {
                     <h2 className="text-foreground text-center">Entre para nossa comunidade e aproveite as melhores promoções e oportunidades de ganho!</h2>
                 </div>
 
+            </section>
+
+            {/* Sixth section */}
+            <section id="sixth-section">
+                <div className="flex flex-col justify-center text-center">
+
+                    <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                    <h2 className="font-title text-foreground md:text-3xl text-2xl text-center leading-relaxed">
+                        Nossas
+                    </h2>
+                    <h1 className="font-title text-primary md:text-5xl text-3xl text-center leading-relaxed">
+                        Redes Sociais
+                    </h1>
+                    <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                </div>
+                <SocialMedia></SocialMedia>
             </section>
 
             {/* Second Section */}
@@ -94,7 +112,7 @@ export default function Home() {
             </section >
 
             {/* Third Section */}
-            <section id="third-section">
+            <section id="third-section" className="flex flex-col ">
                 <div className="flex flex-col justify-center text-center">
 
                     <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
@@ -111,16 +129,20 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row justify-center w-full items-center gap-16">
                     <BronzePlanCard
                         price="29,99"
-                        period="1 mês"
+                        period="1 mês - renova automaticamente"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </BronzePlanCard>
                     <GoldPlanCard
                         price="59.99"
-                        period="3 meses de acesso vitalício"
+                        period="3 meses - renova automaticamente"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </GoldPlanCard>
+                </div>
+
+                <div className="mx-auto mt-16">
+                    <CancelButton></CancelButton>
                 </div>
 
             </section>
