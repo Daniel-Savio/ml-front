@@ -1,17 +1,43 @@
 import { BronzePlanCard, GoldPlanCard } from "@/components/plan-cards";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sucessos } from "./sections/home/sucessos";
 import { FAQS } from "./sections/home/faqs";
 import { variables } from "@/lib/consts";
 import { SocialMedia } from "./sections/home/social-media";
 import { CancelButton } from "@/components/cancel-button";
+import axios from "axios";
 
 export default function Home() {
 
     const [yagoHoverd, setYagoHoverd] = useState(false);
     const [wellHoverd, setWellHoverd] = useState(false);
+
+    useEffect(() => {
+        axios.get(`${variables.api}/keep-alive`)
+            .then(response => {
+                // Handle response
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+
+        // Set up interval for subsequent requests (10 minutes = 600000 milliseconds)
+        const intervalId = setInterval(() => {
+            axios.get('/your-endpoint')
+                .then(response => {
+                    // Handle response
+                    console.log(response.data);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }, 600000);
+
+        return () => clearInterval(intervalId);
+    })
 
     return (
         <div className="flex flex-col justify-center container mx-auto pt-8 gap-16 md:gap-40">

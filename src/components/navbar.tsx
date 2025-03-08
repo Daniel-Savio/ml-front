@@ -28,7 +28,7 @@ export function Navbar() {
                     <NavLink link={`${variables.default}/#fourth-section`} value='Sucessos'></NavLink>
                     <NavLink link={`${variables.default}/#fifth-section`} value='Perguntas'></NavLink>
                 </div>
-                <div className='flex gap-4'>
+                <div className='md:flex hidden md:gap-4'>
                     <CancelButton></CancelButton>
                     <Button variant={'outline'} onClick={() => {
                         ///public/welle: Unreachable code error
