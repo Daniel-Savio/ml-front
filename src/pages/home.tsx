@@ -6,7 +6,7 @@ import { Sucessos } from "./sections/home/sucessos";
 import { FAQS } from "./sections/home/faqs";
 import { variables } from "@/lib/consts";
 import { SocialMedia } from "./sections/home/social-media";
-import { CancelButton } from "@/components/cancel-button";
+
 import axios from "axios";
 
 export default function Home() {
@@ -167,9 +167,9 @@ export default function Home() {
                     </GoldPlanCard>
                 </div>
 
-                <div className="mx-auto mt-16">
+                {/* <div className="mx-auto mt-16">
                     <CancelButton></CancelButton>
-                </div>
+                </div> */}
 
             </section>
 
