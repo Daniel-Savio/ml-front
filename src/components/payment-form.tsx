@@ -4,10 +4,12 @@ import { CircleHelp, LoaderCircle } from "lucide-react";
 import { easeIn, motion } from 'motion/react';
 import { useState } from 'react';
 import axios from 'axios';
+import { toast } from 'sonner';
 
 
 interface FormData {
     nick: string;
+    email: string;
 }
 
 export function PaymentForm({ link }: { link: string }) {
@@ -25,10 +27,13 @@ export function PaymentForm({ link }: { link: string }) {
                     "Content-Type": "application/json",
                 },
             });
-            if (response.data) {
-                //setLoading(false)
-                ///public/welle: Unreachable code error
+
+            if (response.status === 200 && response.data.success !== false) {
                 window.location.href = response.data;
+            } else {
+                console.log("deu pau aqui")
+                setLoading(false)
+                toast.error(response.data.message);
             }
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -62,6 +67,19 @@ export function PaymentForm({ link }: { link: string }) {
                         {...register('nick', { required: true, minLength: 3 })}
                     />
                     {errors.nick && <span className='text-red-400 text-sm mt-1'>Insira um nick válido </span>}
+
+
+                    <div className="flex justify-around items-center mt-6">
+
+                        <label className='text-foreground font-bold' htmlFor="email">Email para cadastro</label>
+
+                    </div>
+                    <input
+                        className='bg-zinc-900 text-sm border-2 border-ring text-foreground outline-none rounded-md p-1 mt-2'
+                        id="email"
+                        {...register('email', { required: true, pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ })}
+                    />
+                    {errors.email && <span className='text-red-400 text-sm mt-1'>Insira um email válido </span>}
                 </div>
 
                 <Button className='font-bold' type="submit">Ir para o pagamento <LoaderCircle className={`animate-spin ${loading ? "" : "hidden"}`} size={8} /></Button>

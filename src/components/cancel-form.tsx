@@ -5,6 +5,7 @@ import { LoaderCircle } from "lucide-react";
 import { useState } from 'react';
 import axios from 'axios';
 import { variables } from '@/lib/consts';
+import { toast } from 'sonner';
 
 interface FormData {
     email: string;
@@ -25,9 +26,14 @@ export function CancelForm() {
                     "Content-Type": "application/json",
                 },
             });
-            if (response.data) {
-                window.location.href = response.data;
+            if (response.status !== 200) {
+                toast.error(response.data.message);
             }
+            toast.success(response.data.message);
+
+
+
+
         } catch (error) {
             console.error('Error submitting form:', error);
         }
@@ -51,7 +57,7 @@ export function CancelForm() {
                     {errors.email && <span className='text-red-400 text-sm mt-1'>Insira um email válido </span>}
                 </div>
 
-                <Button className='font-bold' type="submit">Ir para o pagamento <LoaderCircle className={`animate-spin ${loading ? "" : "hidden"}`} size={8} /></Button>
+                <Button className='font-bold' type="submit">Cancelar assinatura <LoaderCircle className={`animate-spin ${loading ? "" : "hidden"}`} size={8} /></Button>
             </div>
         </form>
     );
