@@ -32,7 +32,10 @@ export function CancelForm() {
 
                 toast.error(response.data.message);
             }
-            toast.success(response.data.message);
+            else {
+
+                toast.success(response.data.message);
+            }
 
 
 
