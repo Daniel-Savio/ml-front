@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Sucessos } from "./sections/home/sucessos";
 import { FAQS } from "./sections/home/faqs";
 import { variables } from "@/lib/consts";
+import { SocialMedia } from "./sections/home/social-media";
+import { CancelButton } from "@/components/cancel-button";
 
 export default function Home() {
 
@@ -18,7 +20,7 @@ export default function Home() {
             <section className="mt-24">
                 <div className=" flex flex-col text-center justify-center items-center gap-3">
                     <h1 className="font-title text-foreground md:text-3xl text-2xl text-center">
-                        Aprenda a lucrar de verdade no
+                        Aprenda a lucrar de verdade dentro do
                     </h1>
                     <motion.svg className="w-full">
                         <motion.text
@@ -39,6 +41,22 @@ export default function Home() {
 
             </section>
 
+            {/* Sixth section */}
+            <section id="sixth-section">
+                <div className="flex flex-col justify-center text-center">
+
+                    <motion.div whileInView={{ width: 200 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                    <h2 className="font-title text-foreground md:text-3xl text-2xl text-center leading-relaxed">
+                        Nossas
+                    </h2>
+                    <h1 className="font-title text-primary md:text-5xl text-3xl text-center leading-relaxed">
+                        Redes Sociais
+                    </h1>
+                    <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
+                </div>
+                <SocialMedia></SocialMedia>
+            </section>
+
             {/* Second Section */}
             <section id="second-section" className="mt-16">
 
@@ -54,7 +72,7 @@ export default function Home() {
                 {/* YAGO */}
                 <div className="flex flex-col md:flex-row justify-center mt-16 items-center gap-8">
                     <div className="bg-background border-2 border-primary py-4 px-4 text-justify md:text-left md:pl-16 md:pr-32 rounded-md mx-2 md:w-1/2 shadow-lg shadow-secondary">
-                        <p className="text-foreground text-lg font-bold">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, libero eum! Tenetur voluptate obcaecati doloribus, aut laboriosam dolore, non hic sed porro harum possimus ad quaerat iste velit consequuntur ullam."</p>
+                        <p className="text-foreground text-lg font-bold">"Nosso grupo no Discord é o lugar perfeito para quem busca oportunidades únicas! Aqui, você encontra promoções imperdíveis, passagens aéreas com descontos e ofertas exclusivas no Mercado Livre. Tudo organizado para você economizar tempo e dinheiro."</p>
                     </div>
 
                     <motion.div
@@ -84,7 +102,7 @@ export default function Home() {
                     </motion.div>
 
                     <div className="bg-background border-2 border-primary py-4 px-4 text-justify md:text-right md:pl-32 md:pr-16 rounded-md mx-2 md:w-1/2 shadow-lg shadow-secondary">
-                        <p className="text-foreground text-lg font-bold">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, libero eum! Tenetur voluptate obcaecati doloribus, aut laboriosam dolore, non hic sed porro harum possimus ad quaerat iste velit consequuntur ullam."</p>
+                        <p className="text-foreground text-lg font-bold">"Além de encontrar promoções, você também pode vender seus produtos no Mercado Livre com dicas valiosas que compartilhamos. Nosso grupo é uma comunidade ativa, onde todos se ajudam a aproveitar as melhores oportunidades. Junte-se a nós e não perca mais nada!"</p>
                     </div>
 
 
@@ -94,7 +112,7 @@ export default function Home() {
             </section >
 
             {/* Third Section */}
-            <section id="third-section">
+            <section id="third-section" className="flex flex-col ">
                 <div className="flex flex-col justify-center text-center">
 
                     <motion.div whileInView={{ width: 300 }} className={`border-t-4 mx-auto border-primary transition-all w-0  my-5`}></motion.div>
@@ -111,16 +129,20 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row justify-center w-full items-center gap-16">
                     <BronzePlanCard
                         price="29,99"
-                        period="1 mês"
+                        period="1 mês - renova automaticamente"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </BronzePlanCard>
                     <GoldPlanCard
-                        price="19.00/mês"
-                        period="3 meses"
+                        price="59.99"
+                        period="3 meses - renova automaticamente"
                         options={['Acesso ao servidor', 'Bot de ofertas e promoções', 'Contato com todos os membros', 'Acesso a ofertas exclusivas', 'Acessos às novas ferramentas ']}>
 
                     </GoldPlanCard>
+                </div>
+
+                <div className="mx-auto mt-16">
+                    <CancelButton></CancelButton>
                 </div>
 
             </section>

@@ -117,7 +117,7 @@ export function GoldPlanCard({ price, period, options }: PlanProps) {
     <>
       <Tilt tiltReverse={true} tiltMaxAngleX={5} tiltMaxAngleY={5}>
 
-        <Card className="border-primary bg-[url(/public/Vector.svg)]  bg-no-repeat bg-center shadow-lg shadow-primary">
+        <Card className="border-primary bg-[url(/Vector.svg)]  bg-no-repeat bg-center shadow-lg shadow-primary">
           <CardHeader className="flex flex-col text-center justify-center">
             <CardTitle className="font-title text-4xl text-primary py-2">Trimestral</CardTitle>
 

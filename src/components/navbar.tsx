@@ -13,6 +13,7 @@ import {
     DrawerTrigger,
 } from "./ui/drawer"
 import { variables } from '@/lib/consts';
+import { CancelButton } from './cancel-button';
 
 export function Navbar() {
     return (
@@ -27,11 +28,14 @@ export function Navbar() {
                     <NavLink link={`${variables.default}/#fourth-section`} value='Sucessos'></NavLink>
                     <NavLink link={`${variables.default}/#fifth-section`} value='Perguntas'></NavLink>
                 </div>
+                <div className='flex gap-4'>
+                    <CancelButton></CancelButton>
+                    <Button variant={'outline'} onClick={() => {
+                        ///public/welle: Unreachable code error
+                        window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
+                    }} className="md:flex hidden">Fale Conosco</Button>
 
-                <Button variant={'outline'} onClick={() => {
-                    ///public/welle: Unreachable code error
-                    window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
-                }} className="md:flex hidden">Fale Conosco</Button>
+                </div>
 
                 <div className='md:hidden'>
                     <Drawer >
@@ -51,6 +55,7 @@ export function Navbar() {
                                     ///public/welle: Unreachable code error
                                     window.location.href = "https://t.me/+ix77EIb2KaNmYjdh";
                                 }} className="md:flex">Fale Conosco</Button>
+                                <CancelButton></CancelButton>
                             </div>
 
                         </DrawerContent>
