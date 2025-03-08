@@ -28,6 +28,9 @@ export function CancelForm() {
             });
             if (response.status !== 200) {
                 toast.error(response.data.message);
+            } else if (response.data.success === false) {
+
+                toast.error(response.data.message);
             }
             toast.success(response.data.message);
 
